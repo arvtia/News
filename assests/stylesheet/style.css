@@ -1,0 +1,14 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+.has-text-weight-bold{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* apoi news  */
+.card {
+    margin: 20px 0;
+  }
