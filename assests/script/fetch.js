@@ -55,3 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+document.addEventListener("DOMContentLoaded", () =>{
+  setInterval(() => {
+    location.reload()
+  }, 8000);
+});

@@ -63,7 +63,7 @@
           <i class="fas fa-desktop px-2"></i>
         </span>
       </a>
-      <a href="" class="navbar-item">
+      <a href="entertainment.php" class="navbar-item">
         <span>
           Entertainment
         </span>

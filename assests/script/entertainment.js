@@ -1,5 +1,7 @@
+
 document.addEventListener("DOMContentLoaded", () => {
-    const apiUrl = "https://newsapi.org/v2/everything?q=Business&investment&from=2025-03-15&sortBy=publishedAt&apiKey=c8486164c0894dbeb2d0947626cee030";
+    const apiUrl = "https://newsapi.org/v2/everything?q=entertainment&from=2025-03-15&sortBy=publishedAt&apiKey=c8486164c0894dbeb2d0947626cee030";
+  
     const fetchNews = async () => { 
       try {
         const response = await fetch(apiUrl); 
@@ -48,5 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Error fetching news:", error);
       }
     };
+  
     fetchNews(); // Call the function
   });

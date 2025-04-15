@@ -153,7 +153,7 @@
   </div>
 </section>
 
-<section class="section">
+<!-- <section class="section">
   <div class="container">
     <div class="columns is-multiline is-centered">
       <div class="has-text-centered mt-5">
@@ -162,8 +162,30 @@
     </div>
   </div>
 
-</section>
+</section> -->
 
+
+<section class="hero is-small"> 
+    <div class="hero-body">
+        <div class="columns">
+            <div class="column">
+                <div class="card">
+                  <div class="card-title">
+                       <p class="title">BCC Newsletter is truly a time saver</p> 
+                  </div>
+                  <div class="subtitle">Lorem ipsum dolor sit amet.
+                  Beatae officia vel veniam soluta.
+                  Nobis omnis at esse cupiditate?</div>
+                  <img src="assests/images/test-3.png" alt="testi-1" class="1by1" style="height:70px; object-fit-cover">
+                  <div class="card-body">
+                     
+                  </div>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
 
 
 
