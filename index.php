@@ -148,12 +148,21 @@
   <div class="container">
     <div id="news234" class="columns is-multiline is-centered"></div>
     <div class="has-text-centered mt-5">
-      <a href="view-all-news.html" class="button is-primary is-medium">View More</a>
+      <a href="tesla.php" class="button  is-small">View More</a>
     </div>
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline is-centered">
+      <div class="has-text-centered mt-5">
+        <a href="business.php" class="button  is-small">View more</a>
+      </div>
+    </div>
+  </div>
 
+</section>
 
 
 
