@@ -10,7 +10,6 @@
 <section class="section">
     <div class="container">
         <div id="technology342" class="columns is-multiline is-centered">
-
         </div>
         <div class="has-text-centered mt-5">
             <button class="button is-small" onclick="loadmore()">Show more</button>
