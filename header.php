@@ -30,25 +30,61 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
-        Home
+      <a href="" class="navbar-item">
+        <span>
+          Space
+        </span>
+        <span>
+          <i class="fas fa-space-shuttle px-2"></i>
+        </span>
       </a>
 
-      <a class="navbar-item">
-        Live News
+      <a href="" class="navbar-item">
+        <span>
+          Business
+        </span>
+        <!-- <span>
+          <i class="fas fa-space-shuttle px-2"></i>
+        </span> -->
+      </a>
+      <a href="" class="navbar-item">
+        <span>
+          Technology
+        </span>
+        <span>
+          <i class="fas fa-desktop px-2"></i>
+        </span>
+      </a>
+      <a href="" class="navbar-item">
+        <span>
+          Entertainment
+        </span>
+        <span>
+          <i class="fas fa- px-2"></i>
+        </span>
       </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          International News
+          International 
         </a>
 
         <div class="navbar-dropdown">
           <a class="navbar-item">
-            About
+            <span>
+              Broadcast journalism
+            </span>
+            <span>
+              <i class="fas fa-video-camera"></i>
+            </span>
           </a>
           <a class="navbar-item">
-            Jobs
+              <span>
+                 New Law and Government Policies
+              </span>
+              <span>
+                <i class="fas fa-book"></i>
+              </span>
           </a>
           <a class="navbar-item">
             Career
@@ -64,9 +100,9 @@
     <div class="navbar-end">
       <div class="navbar-item">
             <div class="field has-addons">
-                <div class="control">
+                <a href="search.php"><div class="control">
                     <input class="input is-small" type="text" placeholder="Find what you looking for">
-                </div>
+                </div></a>
                 <div class="control">
                     <button class="button is-small">
                     Search
