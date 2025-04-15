@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    const apiUrl = "https://newsapi.org/v2/everything?q=Business&investment&from=2025-03-15&sortBy=publishedAt&apiKey=c8486164c0894dbeb2d0947626cee030";
+    const apiUrl = "https://newsapi.org/v2/everything?q=technology&from=2025-03-15&sortBy=publishedAt&apiKey=c8486164c0894dbeb2d0947626cee030";
   
     const fetchNews = async () => { 
       try {
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = await response.json();
         const articles = data.articles; 
         // .filter(article => article.language === "en"); // Fix typo
-        const newsContainer = document.getElementById("business3241");
+        const newsContainer = document.getElementById("technology342");
         if (!newsContainer) {
           console.error("Element with id 'business3241' not found!");
           return;

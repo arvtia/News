@@ -20,10 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
       articles.forEach((article) => {
         const maxTitleLength = 50; // Maximum title length
         const maxDescriptionLength = 80;
+        const maxTimeLength = 10;
         const truncatedTitle = article.title.length > maxTitleLength
           ? article.title.slice(0, maxTitleLength) + "..." // Truncate title
           : article.title;
-        
+        const turncateTime = article.publishedAt.length > maxTimeLength ? article.publishedAt.slice(0, maxTimeLength) + "." : article.publishedAt;
         const turncateDescription = article.description.length > maxDescriptionLength ? article.description.slice(0, maxDescriptionLength) + "..." : article.description; 
         const newsItem = `
           <div class="column is-3">
@@ -32,12 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 <figure class="image is-4by3">
                   <img src="${article.urlToImage || 'default-image.jpg'}" alt="${truncatedTitle || 'News Image'}" style="object-fit:cover;">
                 </figure>
-                <p class="is-6">${article.publishedAt}</p>
               </div>
               <div class="card-content">
+                <p class="is-size-7">${article.publishedAt}</p>
                 <p class="title is-6">${truncatedTitle}</p>
+                <p class="is-size-6 subtitle">${turncateDescription}</p>
                 <a href="${article.url}" target="_blank" class="button is-small">Read More</a>
-                <p class="is-6">${turncateDescription}</p>
                 
               </div>
             </div>

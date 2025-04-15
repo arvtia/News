@@ -30,6 +30,14 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
+      <a href="index.php" class="navbar-item">
+        <span>
+          Home
+        </span>
+        <span>
+          <i class="fas fa-home px-2"></i>
+        </span>
+      </a>
       <a href="" class="navbar-item">
         <span>
           Space
@@ -39,7 +47,7 @@
         </span>
       </a>
 
-      <a href="" class="navbar-item">
+      <a href="business.php" class="navbar-item">
         <span>
           Business
         </span>
@@ -47,7 +55,7 @@
           <i class="fas fa-space-shuttle px-2"></i>
         </span> -->
       </a>
-      <a href="" class="navbar-item">
+      <a href="technology.php" class="navbar-item">
         <span>
           Technology
         </span>
@@ -92,6 +100,31 @@
           
           <a class="navbar-item">
             Report an issue
+          </a>
+        </div>
+      </div>
+      <!-- another drop down -->
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          <span>
+            Language
+          </span>
+          <span>
+            <i class="fas fa-language"></i>
+          </span>
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            <span>
+              Hindi
+            </span>
+            
+          </a>
+          <a href class="navbar-item">
+              <span>
+                 English
+              </span>
           </a>
         </div>
       </div>
