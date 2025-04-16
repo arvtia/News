@@ -12,6 +12,7 @@
 </head>
 <body>
 
+
 <!-- navbar- -->
 
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
@@ -105,26 +106,15 @@
       </div>
       <!-- another drop down -->
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          <span>
-            Language
-          </span>
-          <span>
-            <i class="fas fa-language"></i>
-          </span>
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item" id="google_translate_element">
-            
-          </a>
-          <a href class="navbar-item">
-              <span>
-                 English
-              </span>
-          </a>
-        </div>
+          
+        
       </div>
+      <a class="navbar-item">
+          <select class="select" onchange="changeLanguageByButtonClick()" id="google_translate_element">
+            <option class="option" value="en">English</option>
+            <option class="option" value="hi">Hindi</option>
+          </select>
+        </a>
     </div>
 
     <div class="navbar-end">

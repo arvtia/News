@@ -12,3 +12,9 @@ body{
 .card {
     margin: 20px 0;
   }
+
+
+   
+  iframe {
+    visibility: hidden !important;
+  }
