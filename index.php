@@ -167,7 +167,7 @@
 
 
         
-
+<div id="google_translate_element"></div>
 
 
 <script src="assests/script/fetch.js"></script>

@@ -1,5 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const apiUrl = "https://newsapi.org/v2/everything?q=Business&investment&from=2025-03-15&sortBy=publishedAt&apiKey=c8486164c0894dbeb2d0947626cee030";
+    //const apiUrl = "https://newsapi.org/v2/everything?q=tesla&from=2025-03-16&sortBy=publishedAt&apiKey=b689845505e94888ab610ccffc0da304";
+
+
+    const currentDate = new Date();
+
+    // Extract year, month, and day
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0') - 1; 
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    
+    // Format the date as YYYY-MM-DD
+    const formattedDate = `${year}-${month}-${day}`;
+    console.log(formattedDate);
+    const urlHead = `https://newsapi.org/v2/everything?q=Business&from=`;
+    const urlTail = `&sortBy=publishedAt&apiKey=`;
+    const apiKey = `b689845505e94888ab610ccffc0da304`;
+  
+    const apiUrl = `${urlHead}${formattedDate}${urlTail}${apiKey}`;
+    console.log(apiUrl);
+
     const fetchNews = async () => { 
       try {
         const response = await fetch(apiUrl); 

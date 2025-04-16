@@ -9,9 +9,9 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar is-light">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="#">My News App</a>
-    </div>
+    <a class="navbar-item">
+        <img src="assests/images/logo-bbc-removebg-preview.png" alt="logo" style="height:50px; width:60px; object-fit:cover;">
+    </a>
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="field has-addons">
@@ -35,7 +35,8 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const apiUrlBase = "https://newsapi.org/v2/everything?apiKey=c8486164c0894dbeb2d0947626cee030";
+      const apiUrlBase = "https://newsapi.org/v2/everything?apiKey=b689845505e94888ab610ccffc0da304";
+      
 
       // Parse the user input query
       const parseQuery = (query) => {
@@ -115,8 +116,7 @@
       });
     });
   </script>
-<script src="assests/script/business.js"></script>
-<script src="assests/script/fetch.js"></script>
+
 
 </body>
 </html>

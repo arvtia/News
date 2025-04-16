@@ -115,10 +115,7 @@
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            <span>
-              Hindi
-            </span>
+          <a class="navbar-item" id="google_translate_element">
             
           </a>
           <a href class="navbar-item">
