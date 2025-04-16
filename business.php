@@ -13,7 +13,7 @@
 
         </div>
         <div class="has-text-centered mt-5">
-            <button class="button is-small" onclick="loadmore()">Show more</button>
+            <button class="button is-small" onclick="loadmore()" id="loadmore-article" >Show more</button>
         </div>
     </div>
 </section>

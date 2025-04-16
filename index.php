@@ -148,7 +148,7 @@
   <div class="container">
     <div id="news234" class="columns is-multiline is-centered"></div>
     <div class="has-text-centered mt-5">
-      <a href="tesla.php" class="button  is-small">View More</a>
+      <button class="button is-small" id="loadmore-article" onclick="loadmore()">load more</button>
     </div>
   </div>
 </section>

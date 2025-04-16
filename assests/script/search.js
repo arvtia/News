@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const year = currentDate.getFullYear();
       const month = String(currentDate.getMonth()).padStart(2, '0'); // Fixed month issue
       const day = String(currentDate.getDate()).padStart(2, '0');
-  
+    
       // Format the date as YYYY-MM-DD
       const formattedDate = `${year}-${month}-${day}`;
       console.log(formattedDate);

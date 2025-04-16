@@ -1,93 +1,62 @@
 document.addEventListener("DOMContentLoaded", () => {
-  //const apiUrl = "https://newsapi.org/v2/everything?q=tesla&from=2025-03-16&sortBy=publishedAt&apiKey=b689845505e94888ab610ccffc0da304";
-  //https://newsapi.org/v2/everything?q=tesla&from=2025-03-16&sortBy=publishedAt&apiKey=b689845505e94888ab610ccffc0da304
+    let currentPage = 1; 
+    const pageSize = 8; // no of art. per . p
+    const newsContainer = document.getElementById("news234");
+    const apiKey = `b689845505e94888ab610ccffc0da304`;
+    const urlHead = `https://newsapi.org/v2/everything?q=Hindi&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
   
+    const fetchNews = async (page) => {
+      const currentDate = new Date();
+      const year = currentDate.getFullYear();
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0') - 1; 
+      const day = String(currentDate.getDate()).padStart(2, '0');
+    
+    // date ko format kiya aur month - 1
+      const formattedDate = `${year}-${month}-${day}`;
+      const apiUrl = `${urlHead}&from=${formattedDate}&page=${page}&pageSize=${pageSize}`; // new url for api 
   
-  const currentDate = new Date();
-
-  // Extract year, month, and day
-  const year = currentDate.getFullYear();
-  const month = String(currentDate.getMonth() + 1).padStart(2, '0') - 1; 
-  const day = String(currentDate.getDate()).padStart(2, '0');
+      try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) throw new Error(`Failed to fetch news articles. HTTP status: ${response.status}`);
   
-  // Format the date as YYYY-MM-DD
-  const formattedDate = `${year}-${month}-${day}`;
-  console.log(formattedDate);
-  const urlHead = `https://newsapi.org/v2/everything?q=Hindi&from=`;
-  const urlTail = `&language=en&sortBy=publishedAt&apiKey=`;
-  const apiKey = `b689845505e94888ab610ccffc0da304`;
-
-  const apiUrl = `${urlHead}${formattedDate}${urlTail}${apiKey}`;
-  console.log(apiUrl);
-
-  const fetchNews = async () => {
-    try {
-      const response = await fetch(apiUrl); // Fetch API
-      if (!response.ok) throw new Error(`Failed to fetch Tesla news articles. HTTP status: ${response.status}`);
-
-      const data = await response.json();
-      const articles = data.articles.filter(article => article.urlToImage && article.urlToImage.trim() !== ""); // Filter articles with valid `urlToImage`
-      
-      const newsContainer = document.getElementById("news234");
-      if (!newsContainer) {
-        console.error("Element with id 'news234' not found!");
-        return;
-      }
-
-      newsContainer.innerHTML = ""; // Clear previous content
-
-      articles.forEach((article) => {
-        const maxTitleLength = 50; // Maximum title length
-        const maxDescriptionLength = 80;
-        const maxTimeLength = 10;
-        const articleCount = 8;
-        const truncatedTitle = article.title.length > maxTitleLength
-          ? article.title.slice(0, maxTitleLength) + "..." // Truncate title
-          : article.title;
-        const turncateTime = article.publishedAt.length > maxTimeLength ? article.publishedAt.slice(0, maxTimeLength) : article.publishedAt;
-        const turncateDescription = article.description.length > maxDescriptionLength ? article.description.slice(0, maxDescriptionLength) + "..." : article.description; 
-        const newsItem = `
-          <div class="column is-3">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="${article.urlToImage || 'default-image.jpg'}" alt="${truncatedTitle || 'News Image'}" style="object-fit:cover;">
-                </figure>
-              </div>
-              <div class="card-content">
-                <p class="is-size-7">${turncateTime}</p>
-                <p class="title is-6">${truncatedTitle}</p>
-                <p class="is-size-6 subtitle">${turncateDescription}</p>
-                <a href="${article.url}" target="_blank" class="button is-small">Read More</a>
-                
+        const data = await response.json();
+        const articles = data.articles.filter(article => article.urlToImage);
+  
+        articles.forEach((article) => {
+          const truncatedTitle = article.title.length > 50 ? article.title.slice(0, 50) + "..." : article.title;
+          const truncatedDescription = article.description.length > 80 ? article.description.slice(0, 80) + "..." : article.description;
+          // card layout -bulma css classes
+          const newsItem = `
+            <div class="column is-3">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="${article.urlToImage}" alt="${truncatedTitle}" >
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <p class="title is-6">${truncatedTitle}</p>
+                  <p class="subtitle is-6">${truncatedDescription}</p>
+                  <a href="${article.url}" target="_blank" class="button is-small">Read More</a>
+                </div>
               </div>
             </div>
-          </div>
-        `;
-        newsContainer.innerHTML += newsItem; // Append news item to container
-      });
-    } catch (error) {
-      console.error("Error fetching news:", error);
-    }
-  };
-
-  fetchNews(); // Call the function
-});
-
-
- // Prints the current date in the specified format
-
-
-
-
-
-// there is not reason to be refreshing the page for now - api is throwing error for the too many requests.
-
-// document.addEventListener("DOMContentLoaded", () =>{
-//   setInterval(() => {
-//     location.reload()
-//   }, 8000);
-// });
-
-
-
+          `;
+          newsContainer.innerHTML += newsItem;
+        });
+      } catch (error) {
+        console.error("Error fetching news:", error);
+      }
+    };
+  
+    function loadMore() {
+        currentPage++; // Load next page
+        fetchNews(currentPage);
+    };
+  
+    // Initial Load
+    fetchNews(currentPage);
+  
+    // Attach Scroll Event Listener
+    document.getElementById("loadmore-article").addEventListener("click", loadMore);
+  });

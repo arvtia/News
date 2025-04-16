@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     //const apiUrl = "https://newsapi.org/v2/everything?q=tesla&from=2025-03-16&sortBy=publishedAt&apiKey=b689845505e94888ab610ccffc0da304";
 
-
+    let currentPage = 1; 
+    const pageSize = 8; // no of art. per . p
     const currentDate = new Date();
 
     // Extract year, month, and day
