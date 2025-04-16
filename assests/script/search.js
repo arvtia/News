@@ -50,15 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
           newsContainer.innerHTML = "";
   
           articles.forEach((article) => {
-            const maxTitleLength = 50; 
+            const maxTitleLength = 50; // Maximum title length
             const maxDescriptionLength = 80;
+            const maxTimeLength = 10;
             const truncatedTitle = article.title.length > maxTitleLength
-              ? article.title.slice(0, maxTitleLength) + "..." 
-              : article.title;
-            const truncatedDescription = article.description.length > maxDescriptionLength
-              ? article.description.slice(0, maxDescriptionLength) + "..."
-              : article.description;
-            const newsItem = `
+            ? article.title.slice(0, maxTitleLength) + "..." // Truncate title
+            : article.title;
+            const turncateTime = article.publishedAt.length > maxTimeLength ? article.publishedAt.slice(0, maxTimeLength) : article.publishedAt;
+            const turncateDescription = article.description.length > maxDescriptionLength ? article.description.slice(0, maxDescriptionLength) + "..." : article.description; 
+        const newsItem = `
               <div class="column is-2">
                 <div class="card">
                   <div class="card-image">
@@ -67,9 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     </figure>
                   </div>
                   <div class="card-content">
-                    <p class="is-size-7">${article.publishedAt}</p>
-                    <p class="title is-6">${truncatedTitle}</p>
-                    <p class="is-size-6 subtitle">${truncatedDescription}</p>
+                    <p class="is-size-7">${turncateTime}</p>
+                    <p class="title is-7">${truncatedTitle}</p>
+                    <p class="is-size-7 subtitle">${turncateDescription}</p>
                     <a href="${article.url}" target="_blank" class="button is-small">Read More</a>
                   </div>
                 </div>
