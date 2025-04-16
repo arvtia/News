@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const formattedDate = `${year}-${month}-${day}`;
   console.log(formattedDate);
   const urlHead = `https://newsapi.org/v2/everything?q=Hindi&from=`;
-  const urlTail = `&sortBy=publishedAt&apiKey=`;
+  const urlTail = `&language=en&sortBy=publishedAt&apiKey=`;
   const apiKey = `b689845505e94888ab610ccffc0da304`;
 
   const apiUrl = `${urlHead}${formattedDate}${urlTail}${apiKey}`;
@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const maxTitleLength = 50; // Maximum title length
         const maxDescriptionLength = 80;
         const maxTimeLength = 10;
+        const articleCount = 8;
         const truncatedTitle = article.title.length > maxTitleLength
           ? article.title.slice(0, maxTitleLength) + "..." // Truncate title
           : article.title;

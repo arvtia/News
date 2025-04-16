@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BCC News</title>
+    <link rel="icon" type="image/x-icon" href="assests/images/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <!-- <link rel="stylesheet" href="assets/stylesheet/style.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
@@ -11,6 +12,17 @@
 
 </head>
 <body>
+
+<!-- CSS -->
+<style>
+  .navbar-dropdown {
+    display: none; /* Initially hidden */
+  }
+  .navbar-dropdown.is-active {
+    display: block; /* Display dropdown when active */
+  }
+</style>
+
 
 
 <!-- navbar- -->
@@ -73,37 +85,24 @@
         </span>
       </a>
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          International 
+      <!-- HTML -->
+        <div class="navbar-item has-dropdown is-hoverable" id="dropdownNavicon">
+        <a class="navbar-link" id="dropdownToggle">
+            International
         </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            <span>
-              Broadcast journalism
-            </span>
-            <span>
-              <i class="fas fa-video-camera"></i>
-            </span>
-          </a>
-          <a class="navbar-item">
-              <span>
-                 New Law and Government Policies
-              </span>
-              <span>
-                <i class="fas fa-book"></i>
-              </span>
-          </a>
-          <a class="navbar-item">
-            Career
-          </a>
-          
-          <a class="navbar-item">
-            Report an issue
-          </a>
+        <div class="navbar-dropdown" id="dropdownMenu">
+            <a class="navbar-item">
+            <span>Broadcast journalism</span>
+            <span><i class="fas fa-video-camera"></i></span>
+            </a>
+            <a class="navbar-item">
+            <span>New Law and Government Policies</span>
+            <span><i class="fas fa-book"></i></span>
+            </a>
+            <a class="navbar-item">Career</a>
+            <a class="navbar-item">Report an issue</a>
         </div>
-      </div>
+        </div>
       <!-- another drop down -->
       <div class="navbar-item has-dropdown is-hoverable">
           

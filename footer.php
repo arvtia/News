@@ -126,6 +126,32 @@
     }
   </script>
 
+<script>
+    document.getElementId("dropdownNavicon").addEventListener('click', function() {
+    const dropdown = this.closest('.dropdown'); // Find the closest parent dropdown
+    dropdown.classList.toggle('is-hidden');    // Add or remove the 'is-active' class dynamically
+});
+</script>
+
+
+<!-- JavaScript -->
+<script>
+  const dropdownToggle = document.getElementById('dropdownToggle');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  dropdownToggle.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('is-active'); // Toggle visibility
+  });
+</script>
+
+
+
 <script src="assests/script/navbar.js"></script>
 </body>
 </html>
+
+
+
+
+
+
