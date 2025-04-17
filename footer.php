@@ -1,7 +1,7 @@
 
 
 
-<footer class="footer is-fixed-bottom">
+<footer class="footer is-fixed-bottom" style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
     <div class="columns">
         <div class="column is-mobile">
             <!-- menu -->

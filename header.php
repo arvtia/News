@@ -27,7 +27,7 @@
 
 <!-- navbar- -->
 
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
   <div class="navbar-brand">
     <a class="navbar-item">
         <img src="assests/images/logo-bbc-removebg-preview.png" alt="logo" style="height:50px; width:60px; object-fit:cover;">

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const urlHead = `https://newsapi.org/v2/everything?`;
       const searchFor = `q=${searchQuery}`;
       const urlTail = `&from=${formattedDate}&sortBy=publishedAt&apiKey=`;
-      const apiKey = `26873ff28f5143b289b2f020896e094a`;
+      const apiKey = `940cd4550c92490e86aa328ffd5b0b43`;
   
       const apiUrl = `${urlHead}${searchFor}${urlTail}${apiKey}`; // Fixed URL construction
       console.log(apiUrl);

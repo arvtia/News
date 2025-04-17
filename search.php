@@ -6,9 +6,9 @@
   <title>Search in Navbar</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css">
 </head>
-<body>
+<body style="background-color:#ecf0f1;">
   <!-- Navbar -->
-  <nav class="navbar is-light">
+  <nav class="navbar" style="background-color:#fff;">
     <a href="index.php" class="navbar-item">
         <img src="assests/images/logo-bbc-removebg-preview.png" alt="logo" style="height:50px; width:60px; object-fit:cover;">
     </a>

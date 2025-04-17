@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentPage = 1; 
     const pageSize = 8; // no of art. per . p
     const newsContainer = document.getElementById("business3241");
-    const apiKey = `26873ff28f5143b289b2f020896e094a`;
+    const apiKey = `940cd4550c92490e86aa328ffd5b0b43`;
     const urlHead = `https://newsapi.org/v2/everything?q=SpaceNews&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
   
     const fetchNews = async (page) => {
@@ -57,12 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // to check if reah botm ?
     function handleScroll() {
         const scrollTop = window.scrollY; // How far the user has scrolled from the top
-        const viewportHeight = window.innerHeight; // Height of the visible window
-        const documentHeight = document.documentElement.scrollHeight; // Total height of the document
+        const viewportHeight = window.innerHeight; //height of the widnow
+        const documentHeight = document.documentElement.scrollHeight; 
         
-        console.log(scrollTop);
-        console.log(viewportHeight);
-        console.log(documentHeight);
+        // console.log(scrollTop);
+        // console.log(viewportHeight);
+        // console.log(documentHeight);
+        
         // If the user is near the bottom of the page
         if (scrollTop + viewportHeight >= documentHeight - 80) { // Adjust buffer (100px)
             loadMore();

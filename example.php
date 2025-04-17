@@ -2,45 +2,7 @@
 
 
 <!-- navbar -->
- <div class="navbar is-fixed-top">
-    <div class="navbar-brand">
-        <div class="navbar-item">
-            <span>
-                <i class="fas fa-coffee"></i>
-            </span>
-            <span>
-                <p>Coffee</p>
-            </span>
-        </div>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-    <div class="navbar-menu is-active">
-        <div class="navbar-start">
-            <div class="navbar-item">
-                <a href="#">About</a>
-                <a href="#">Career</a>
-                <a href="#">Services</a>
-            </div>
-            <!-- navbar icon -->
-            
-
-        </div>    
-        <div class="navbar-end">
-            
-        </div>
-
-    </div>
-
- </div>
-
-
-
-
+ 
 <div class="dropdown">
   <div class="dropdown-trigger">
     <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
