@@ -19,5 +19,7 @@
 </section>
 
 
+<script src="assests/script/space.js"></script>
+
 
 <?php require_once "footer.php" ?>
