@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentPage = 1; 
     const pageSize = 8; // no of art. per . p
     const newsContainer = document.getElementById("news234");
-    const apiKey = `940cd4550c92490e86aa328ffd5b0b43`;
+    const apiKey = `f7b33673f2be4466aa1a1c03b2026e4c`;
     const urlHead = `https://newsapi.org/v2/everything?q=Hindi&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
   
     const fetchNews = async (page) => {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // console.log(viewportHeight);
         // console.log(documentHeight);
         // If the user is near the bottom of the page
-        if (scrollTop + viewportHeight >= documentHeight - 80) { // Adjust buffer (100px)
+        if (scrollTop + viewportHeight >= documentHeight - 70) { // Adjust buffer (100px)
             loadMore();
         }
     }
