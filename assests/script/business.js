@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const urlHead = `https://newsapi.org/v2/everything?q=Business&language=en&from=`;
     const urlTail = `&sortBy=publishedAt&apiKey=`;
     
-    const apiKey = `940cd4550c92490e86aa328ffd5b0b43`;
+    const apiKey = `c8486164c0894dbeb2d0947626cee030`;
   
     const apiUrl = `${urlHead}${formattedDate}${urlTail}${apiKey}`;
     console.log(apiUrl);
