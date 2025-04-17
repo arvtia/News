@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     let currentPage = 1; 
     const pageSize = 8; // no of art. per . p
-    const newsContainer = document.getElementById("news234");
+    const newsContainer = document.getElementById("business3241");
     const apiKey = `26873ff28f5143b289b2f020896e094a`;
-    const urlHead = `https://newsapi.org/v2/everything?q=Hindi&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
+    const urlHead = `https://newsapi.org/v2/everything?q=Space&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
   
     const fetchNews = async (page) => {
         const currentDate = new Date();

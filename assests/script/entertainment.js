@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(formattedDate);
     const urlHead = `https://newsapi.org/v2/everything?q=Entertainment&from=`;
     const urlTail = `&sortBy=publishedAt&apiKey=`;
-    const apiKey = `b689845505e94888ab610ccffc0da304`;
+    const apiKey = `26873ff28f5143b289b2f020896e094a`;
   
     const apiUrl = `${urlHead}${formattedDate}${urlTail}${apiKey}`;
     console.log(apiUrl);

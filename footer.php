@@ -59,37 +59,13 @@
             </div>
         </div>
     </div>
-    <div class="columns">
+    <div class="columns is-paddingless">
         <div class="column"></div>
         <div class="column is-centererd">
-            <div class="card">
-                <div class="card-content">
-                    <div class="content">
-                        "Stay informed. Stay ahead. Subscribe to our newsletter for breaking news, exclusive stories, and expert insights—delivered straight to your inbox!"
-                    </div>
-                </div>
-            </div>
+            <p class="has-text-centered">©2025 IZS techocrates Inc. All rights reserved.</p>
         </div>
         <div class="column">
-            <!-- news letter email inut field -->
-            <div class="control">
-                <div class="field has-addons">
-                    <p class="control">
-                        <input class="input" type="text" placeholder="Your email">
-                    </p>
-                    <p class="control">
-                        <a class="button is-static">
-                            Join News Letter
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="footer-title">
-            <p class="has-text-centered">©2025 IZS techocrates Inc.
-            All rights reserved.</p>
+            
         </div>
     </div>
 

@@ -51,7 +51,7 @@
           <i class="fas fa-home px-2"></i>
         </span>
       </a>
-      <a href="" class="navbar-item">
+      <a href="space.php" class="navbar-item">
         <span>
           Space
         </span>

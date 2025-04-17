@@ -13,9 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Format the date as YYYY-MM-DD
     const formattedDate = `${year}-${month}-${day}`;
     console.log(formattedDate);
-    const urlHead = `https://newsapi.org/v2/everything?q=Business&from=`;
+    const urlHead = `https://newsapi.org/v2/everything?q=Business&language=en&from=`;
     const urlTail = `&sortBy=publishedAt&apiKey=`;
-    const apiKey = `b689845505e94888ab610ccffc0da304`;
+    
+    const apiKey = `26873ff28f5143b289b2f020896e094a`;
   
     const apiUrl = `${urlHead}${formattedDate}${urlTail}${apiKey}`;
     console.log(apiUrl);
