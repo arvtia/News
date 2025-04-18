@@ -1,5 +1,5 @@
 
-```markdown
+
 # News Website
 
 Welcome to the **News Website** repository! This project is a dynamic news website built using **FetchAPI** in JavaScript, with a backend powered by PHP. The repository contains all the necessary components to fetch, display, and interact with live news articles efficiently.
