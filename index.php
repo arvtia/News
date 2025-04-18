@@ -1,7 +1,7 @@
 <?php include_once "header.php" ?>
 
 
-<section class="hero is-medium">
+<section class="hero is-medium" id="heroWithCar">
   <div class="hero-body">
     <div class="columns is-vcentered">
       <!-- Left Column -->
@@ -142,9 +142,13 @@
     </div>
   </div>
 </section>
+<section class="section" style="background-color:#333; display: none;" id="NewsContainer">
+    <div class="container">
+      <div id="resultsContainer" class="columns is-multiline"></div>
+    </div>
+  </section>
 
-
-<section class="section">
+<section class="section" id="newsContent">
   <div class="container">
     <div id="news234" class="columns is-multiline is-centered"></div>
     <div class="has-text-centered mt-5">
@@ -152,6 +156,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- <section class="section">
   <div class="container">
@@ -164,11 +169,40 @@
 
 </section> -->
 
+<script>
+    
+</script>
+
 
 
         
 <div id="google_translate_element"></div>
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const navBtnSearch = document.getElementById("navbarSearchButton");
+        const hero = document.getElementById("heroWithCar");
+        const newsHero = document.getElementById("newsContent");
+        const NewsContainer = document.getElementById("NewsContainer");
+
+        navBtnSearch.addEventListener("click", () => {
+            hero.style.display = "none";      // Hide the hero element
+            newsHero.style.display = "none";
+            if(NewsContainer.style.display === "none") {
+                NewsContainer.style.display ="block";
+            } else {
+                NewsContainer.style.display = "none";
+            }
+
+             // Hide the newsHero element
+        });
+    });
+</script>
+
+
+
+
+<script src="assests/script/search.js"></script>
 <script src="assests/script/fetch.js"></script>
 <?php include_once "footer.php" ?>

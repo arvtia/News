@@ -118,16 +118,14 @@
 
     <div class="navbar-end">
       <div class="navbar-item">
-            <div class="field has-addons">
-                <a href="search.php"><div class="control">
-                    <input class="input is-small" type="text" placeholder="Find what you looking for">
-                </div></a>
-                <div class="control">
-                    <button class="button is-small">
-                    Search
-                    </button>
-                </div>
-            </div>
+        <div class="field has-addons is-small">
+          <div class="control is-expanded">
+            <input type="text" id="navbarSearchBox" class="input is-small" placeholder="search for -eg., Tesla">
+          </div>
+          <div class="control">
+            <button id="navbarSearchButton" class="button is-small ">Search</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

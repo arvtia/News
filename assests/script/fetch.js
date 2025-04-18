@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const day = String(currentDate.getDate()).padStart(2, '0');
         const formattedDate = `${year}-${month}-${day}`;
         const apiUrl = `${urlHead}&from=${formattedDate}&page=${page}&pageSize=${pageSize}`;
-
+        console.log(apiUrl);
         try {
             const response = await fetch(apiUrl);
             if (!response.ok) throw new Error(`Failed to fetch news articles. HTTP status: ${response.status}`);

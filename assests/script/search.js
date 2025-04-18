@@ -4,8 +4,6 @@
 
 // navbarSearchButton.addEventListener("click", () => {
 //   const searchQuery = navbarSearchBox.value;
-//   performSearch(searchQuery);
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -28,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const urlHead = `https://newsapi.org/v2/everything?`;
       const searchFor = `q=${searchQuery}`;
       const urlTail = `&from=${formattedDate}&sortBy=publishedAt&apiKey=`;
-      const apiKey = `940cd4550c92490e86aa328ffd5b0b43`;
+      const apiKey = `c8486164c0894dbeb2d0947626cee030&pageSize=40`;
   
       const apiUrl = `${urlHead}${searchFor}${urlTail}${apiKey}`; // Fixed URL construction
       console.log(apiUrl);
@@ -59,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const turncateTime = article.publishedAt.length > maxTimeLength ? article.publishedAt.slice(0, maxTimeLength) : article.publishedAt;
             const turncateDescription = article.description.length > maxDescriptionLength ? article.description.slice(0, maxDescriptionLength) + "..." : article.description; 
         const newsItem = `
-              <div class="column is-2">
+              <div class="column is-2 is-light">
                 <div class="card">
                   <div class="card-image">
                     <figure class="image is-4by3">
@@ -76,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
             `;
             newsContainer.innerHTML += newsItem;
+
           });
         } catch (error) {
           console.error("Error fetching news:", error);

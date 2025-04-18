@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pageSize = 8; // Number of articles per page
     const newsContainer = document.getElementById("business3241");
     const apiKey = `c8486164c0894dbeb2d0947626cee030`;
-    const urlHead = `https://newsapi.org/v2/everything?q=NasaNews&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
+    const urlHead = `https://newsapi.org/v2/everything?q=Nasa&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
     let isLoading = false; // To prevent overlapping fetches
 
     const fetchNews = async (page) => {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const day = String(currentDate.getDate()).padStart(2, '0');
         const formattedDate = `${year}-${month}-${day}`;
         const apiUrl = `${urlHead}&from=${formattedDate}&page=${page}&pageSize=${pageSize}`;
-
+        console.log(apiUrl);
         try {
             const response = await fetch(apiUrl);
             if (!response.ok) throw new Error(`Failed to fetch news articles. HTTP status: ${response.status}`);
