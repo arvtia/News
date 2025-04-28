@@ -84,3 +84,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Attach scroll event listener
     window.addEventListener("scroll", handleScroll);
 });
+
+
+
+
+
+
+
+
+
+
+//  web socket code snippet ====?>
+const socket = new WebSocket('wss://example.com/socket');
+
+socket.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    document.getElementById("content").innerHTML = data.latestContent;
+};
+
+socket.onerror = (error) => {
+    console.error("WebSocket error:", error);
+};

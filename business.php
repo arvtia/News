@@ -1,11 +1,18 @@
 <?php require_once "header.php" ?>
 
-<div class="hero is-medium">
+<div class="hero is-medium" id="heroWithCar">
     <div class="hero-body">
         <div class="title is-size-5">Business news</div>
         <div class="subtitle is-size-6">explore what's happening all around the world at one page</div>
     </div>
 </div>
+
+<section class="section" style="background-color:#333; display: none;" id="NewsContainer">
+    <div class="container">
+      <div id="resultsContainer" class="columns is-multiline"></div>
+    </div>
+  </section>
+
 
 <section class="section">
     <div class="container">
@@ -115,6 +122,35 @@
         </div>
     </div>
 </section>
+
+<div id="google_translate_element"></div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const navBtnSearch = document.getElementById("navbarSearchButton");
+        const hero = document.getElementById("heroWithCar");
+        const newsHero = document.getElementById("newsContent");
+        const NewsContainer = document.getElementById("NewsContainer");
+
+        navBtnSearch.addEventListener("click", () => {
+            hero.style.display = "none";      // Hide the hero element
+            newsHero.style.display = "none";
+            if(NewsContainer.style.display === "none") {
+                NewsContainer.style.display ="block";
+            } else {
+                NewsContainer.style.display = "none";
+            }
+
+             // Hide the newsHero element
+        });
+    });
+</script>
+
+
+
+
+<script src="assests/script/search.js"></script>
 
 <script src="assests/script/business.js"></script>
 <?php require_once "footer.php" ?>

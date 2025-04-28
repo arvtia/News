@@ -29,7 +29,11 @@
   <!-- Results Container -->
   <section class="section">
     <div class="container">
-      <div id="weather" class="columns is-multiline"></div>
+      <div id="weatherData" class="columns is-multiline"></div>
+
+
+      
+
     </div>
   </section>
 
