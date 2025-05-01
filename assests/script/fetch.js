@@ -2,8 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentPage = 1;
     const pageSize = 8; // Number of articles per page
     const newsContainer = document.getElementById("news234");
-    const apiKey = `c8486164c0894dbeb2d0947626cee030`;
-    const urlHead = `https://newsapi.org/v2/everything?q=Hindi&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
+    // const apiKey = `6dfbd8495429381ecdf5ff17e6921c2b`;
+    // https://gnews.io/api/v4/search?q=example&apikey=
+
+    
+    
+
+// 'https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=6dfbd8495429381ecdf5ff17e6921c2b;
+
+
+    // const urlHead = `https://newsapi.org/v2/everything?q=Hindi&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
     let isLoading = false; // To prevent overlapping fetches
 
     const fetchNews = async (page) => {
@@ -12,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const month = String(currentDate.getMonth() + 1).padStart(2, '0') - 1; // Adjusting for 0-indexed month
         const day = String(currentDate.getDate()).padStart(2, '0');
         const formattedDate = `${year}-${month}-${day}`;
-        const apiUrl = `${urlHead}&from=${formattedDate}&page=${page}&pageSize=${pageSize}`;
+        // const apiUrl = `${urlHead}&from=${formattedDate}&page=${page}&pageSize=${pageSize}`;
+        const apiUrl = `https://gnews.io/api/v4/search?q=example&apikey=6dfbd8495429381ecdf5ff17e6921c2b`;
         console.log(apiUrl);
         try {
             const response = await fetch(apiUrl);
