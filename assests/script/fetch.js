@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentPage = 1;
     const pageSize = 8; // Number of articles per page
     const newsContainer = document.getElementById("news234");
-    const apiKey = `YOUR_GNEWS_API_KEY`; // Replace with your actual API key
+    const apiKey = `6dfbd8495429381ecdf5ff17e6921c2b`; // Replace with your actual API key
     const apiUrl = `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=${pageSize}&apikey=${apiKey}`;
 
     let isLoading = false; // To prevent overlapping fetches
