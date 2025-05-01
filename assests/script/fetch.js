@@ -94,14 +94,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-//  web socket code snippet ====?>
-const socket = new WebSocket('wss://example.com/socket');
+// //  web socket code snippet ====?>
+// const socket = new WebSocket('wss://example.com/socket');
 
-socket.onmessage = (event) => {
-    const data = JSON.parse(event.data);
-    document.getElementById("content").innerHTML = data.latestContent;
-};
+// socket.onmessage = (event) => {
+//     const data = JSON.parse(event.data);
+//     document.getElementById("content").innerHTML = data.latestContent;
+// };
 
-socket.onerror = (error) => {
-    console.error("WebSocket error:", error);
-};
+// socket.onerror = (error) => {
+//     console.error("WebSocket error:", error);
+// };
